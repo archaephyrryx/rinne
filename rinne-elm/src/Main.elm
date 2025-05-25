@@ -67,7 +67,7 @@ type alias Model = { currentValue: TsubuCount, growthPerClick: TsubuCount }
 
 collect : Model -> Model
 collect model =
-    { currentValue = addTsubu model.currentValue model.growthPerClick
+    { model | currentValue = addTsubu model.currentValue model.growthPerClick
     , growthPerClick = model.growthPerClick
     }
 
